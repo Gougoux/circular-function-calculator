@@ -57,25 +57,32 @@ result_label.pack()
 
 
 # 计算 arctan 的部分（彭万）
-arcsin_frame = tk.Frame(root)
-arcsin_frame.pack()
 
+# Create a frame containing widgets
+arctan_frame = tk.Frame(root)
+arctan_frame.pack()
+
+# Label and entry for input value
 input_label = tk.Label(arcsin_frame, text="Enter input value for arcsin:")
 input_label.pack(side=tk.LEFT)
 input_entry = tk.Entry(arcsin_frame)
 input_entry.pack(side=tk.LEFT)
 
+# Label and entry for number of terms
 nth_label = tk.Label(arcsin_frame, text="Enter number of terms:")
 nth_label.pack(side=tk.LEFT)
 nth_entry = tk.Entry(arcsin_frame)
 nth_entry.pack(side=tk.LEFT)
 
+# Calculate button
 calculate_button_arcsin = tk.Button(root, text="Calculate arcsin", command=calculate_arcsin)
 calculate_button_arcsin.pack()
 
+# Result label
 result_label = tk.Label(root, text="")
 result_label.pack()
 
+root.mainloop()
 
 # 关闭 MATLAB 引擎
 eng.quit()
