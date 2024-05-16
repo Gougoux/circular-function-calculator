@@ -24,6 +24,45 @@ import tkinter as tk
 # 启动 MATLAB 引擎
 eng = matlab.engine.start_matlab()
 # 调用MATLAB部分由宋纯豪同学实现
+# 调用 MATLAB 函数 my_arcsin
+def calculate_arcsin():
+    try:
+        in_val = float(input_entry.get())
+        nth = int(nth_entry.get())
+        result = eng.my_arcsin(in_val, nth)
+        result_label.config(text="Result (arcsin): " + str(result))
+    except ValueError:
+        result_label.config(text="Invalid input")
+
+# 调用 MATLAB 函数 my_cos
+def calculate_cos():
+    try:
+        in_rad = float(rad_entry.get())
+        nth = int(nth_cos_entry.get())
+        result = eng.my_cos(in_rad, nth)
+        result_cos_label.config(text="Result (cos): " + str(result))
+    except ValueError:
+        result_cos_label.config(text="Invalid input")
+
+# 调用 MATLAB 函数 my_sin
+def calculate_sin():
+    try:
+        in_rad = float(rad_sin_entry.get())
+        nth = int(nth_sin_entry.get())
+        result = eng.my_sin(in_rad, nth)
+        result_sin_label.config(text="Result (sin): " + str(result))
+    except ValueError:
+        result_sin_label.config(text="Invalid input")
+
+# 调用 MATLAB 函数 my_arctan
+def calculate_arctan():
+    try:
+        in_val = float(val_arctan_entry.get())
+        nth = int(nth_arctan_entry.get())
+        result = eng.my_arctan(in_val, nth)
+        result_arctan_label.config(text="Result (arctan): " + str(result))
+    except ValueError:
+        result_arctan_label.config(text="Invalid input")
 
 # GUI界面部分由王禹轩 王财成 彭万同学实现
 
