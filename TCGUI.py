@@ -51,11 +51,45 @@ result_label = tk.Label(root, text="")
 result_label.pack()
 
 # 计算 cos 的部分（王财成）
+cos_frame = tk.Frame(root)
+cos_frame.pack()
 
+rad_label = tk.Label(cos_frame, text="Enter angle in radians for cos:")
+rad_label.pack(side=tk.LEFT)
+rad_entry = tk.Entry(cos_frame)
+rad_entry.pack(side=tk.LEFT)
+
+nth_cos_label = tk.Label(cos_frame, text="Enter number of terms:")
+nth_cos_label.pack(side=tk.LEFT)
+nth_cos_entry = tk.Entry(cos_frame)
+nth_cos_entry.pack(side=tk.LEFT)
+
+calculate_button_cos = tk.Button(root, text="Calculate cos", command=calculate_cos)
+calculate_button_cos.pack()
+
+result_cos_label = tk.Label(root, text="")
+result_cos_label.pack()
 
 # 计算 sin 的部分（王财成）
 
+sin_frame = tk.Frame(root)
+sin_frame.pack()
 
+rad_sin_label = tk.Label(sin_frame, text="Enter angle in radians for sin:")
+rad_sin_label.pack(side=tk.LEFT)
+rad_sin_entry = tk.Entry(sin_frame)
+rad_sin_entry.pack(side=tk.LEFT)
+
+nth_sin_label = tk.Label(sin_frame, text="Enter number of terms:")
+nth_sin_label.pack(side=tk.LEFT)
+nth_sin_entry = tk.Entry(sin_frame)
+nth_sin_entry.pack(side=tk.LEFT)
+
+calculate_button_sin = tk.Button(root, text="Calculate sin", command=calculate_sin)
+calculate_button_sin.pack()
+
+result_sin_label = tk.Label(root, text="")
+result_sin_label.pack()
 # 计算 arctan 的部分（彭万）
 
 # Create a frame containing widgets
